@@ -6,11 +6,11 @@ var TodoAppForm = require('TodoAppForm');
 const iChars = "!@#$%^&*()+=-[]\\\';,./{}|\":<>?~`";
 const numbers = "0123456789";
 const styles = {
-	  marginTop: 10,
-marginBottom: 10,
-marginRight: 600,
-marginLeft: 500,
-width: 400,
+	    marginTop: 10,
+		marginBottom: 10,
+		marginRight: 600,
+		marginLeft: 500,
+		width: 400,
 };
 var TodoAppValidate = React.createClass({
 		 getInitialState: function () {
@@ -220,7 +220,7 @@ var TodoAppValidate = React.createClass({
         addLogin: function(e) {
         	this.props.addLogin()
         },
-render: function() {
+	render: function() {
 	let {persons, addPerson,onClick} = this.props
 
 	
@@ -237,11 +237,11 @@ render: function() {
 		    
 		    />
 		    <RaisedButton
-      label="CONTINUE TO LOGIN"
-       labelColor="#fff"
+        label="CONTINUE TO LOGIN"
+        labelColor="#fff"
         backgroundColor="#00bfa5"
-         onClick={onClick}
-         style={styles} />
+        onClick={onClick}
+        style={styles} />
 		</div>
 		</MuiThemeProvider>
 		);

@@ -9,9 +9,9 @@ const styles = {
   height: 600,
   width: 1100,
   marginTop: 10,
-marginBottom: 10,
-marginRight: 130,
-marginLeft: 130,
+  marginBottom: 10,
+  marginRight: 130,
+  marginLeft: 130,
   textAlign: 'center',
   display: 'inline-block',
 
@@ -98,11 +98,11 @@ var TodoApp = React.createClass({
       <br />
       <RaisedButton
       label="Submit"
-       labelColor="#fff"
-        backgroundColor="#00bfa5"
-         onClick={onClick} />
-         <br />
-         <br />
+      labelColor="#fff"
+      backgroundColor="#00bfa5"
+      onClick={onClick} />
+      <br />
+      <br />
      
      
       </Paper>

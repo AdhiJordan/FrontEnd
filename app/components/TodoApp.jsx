@@ -11,19 +11,19 @@ var TodoAppForm = require('TodoAppForm');
 
 var TodoAppValidate = require('TodoAppValidate');
 const styles = {
-     dialog: {
-    width: 500,
+   dialog: {
+     	width: 500,
   },
    cancelLabel: {
-    color: '#464646',
+    	color: '#464646',
   },
    cancelLabel: {
-    color: '#464646',
+    	color: '#464646',
   },
     errors: {
-    position: 'absolute',
-    top: 72,
-    fontSize: 15,
+    	position: 'absolute',
+    	top: 72,
+    	fontSize: 15,
   },
   };
 
@@ -34,29 +34,29 @@ var TodoApp = React.createClass({
       persons: [],
       filterCondition: false,
       open: true,
-       toggleLogin: false,
-       login: {email: '', password: ''},
-       errorlog: {email: '', password: ''},
+      toggleLogin: false,
+      login: {email: '', password: ''},
+      errorlog: {email: '', password: ''},
         };
   },
     handleClose : function() {
-    this.setState({open: false});
+    	this.setState({open: false});
   },
-addPerson(person) {
+	addPerson(person) {
 	
-       console.log(person);
-     var newArr = this.state.persons;
+       
+     	var newArr = this.state.persons;
     
-    newArr.push(person);
+    	newArr.push(person);
    
-    this.setState({persons: newArr});
-    console.log(this.state.persons);
+    	this.setState({persons: newArr});
+    	
 
-    myModal.style.display = "block";
+    	myModal.style.display = "block";
 
     },
 	updatePerson(e) {
- let login = this.state.login
+ 		let login = this.state.login
             
         	if(e.target === undefined && e.length > 0) {
         		let login = this.state.login
@@ -181,7 +181,7 @@ addLoginForm(e) {
    
           	alert('login');
           	console.log(this.state.login);
-          	
+
         	if(!this.checkPerson()) {
         		return ''
         	}
@@ -191,6 +191,12 @@ addLoginForm(e) {
  return this.setState({login: {email: '', password: ''},   errorlog: {email: '', password: ''}})
      
      
+},
+changeRegisterToggle(e) {
+	this.setState({
+
+		toggleLogin: false
+	});
 },
     render() {
     
@@ -207,13 +213,14 @@ addLoginForm(e) {
 		    errorlog={this.state.errorlog} 
 		    onChange={this.updatePerson} 
 		    onClick={this.addLoginForm}
+		    changeRegisterToggle={this.changeRegisterToggle}
 
     		/> :
     		<div>
     		  <TodoAppValidate
-    	  persons={(!filterCondition) ? persons : this.state.persons} 
-    	   onClick={this.addLogin}
-    	   addPerson={this.addPerson} 
+    	  	persons={(!filterCondition) ? persons : this.state.persons} 
+    	    onClick={this.addLogin}
+    	    addPerson={this.addPerson} 
     	  />
     	  <div id="myModal" className="modal">
 
